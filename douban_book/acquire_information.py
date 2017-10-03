@@ -65,7 +65,9 @@ def acquire_info():
     page_urls = get_url()
     for each in page_urls:
         html = get_html(each)
-        all_info.extend(analyze_html(html))
+        #异常处理
+        if get_html(each) not is "error"  
+            all_info.extend(analyze_html(html))
     return all_info
 
 
