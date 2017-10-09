@@ -30,7 +30,6 @@ def get_html(url):
 def analyze_html(html):
     soup = BeautifulSoup(html, 'html.parser')
     info = soup.find_all(id='content')
-    global tr_tags
     for each in info:
         if isinstance(each, bs4.element.Tag):
             tr_tags = each('tr')
